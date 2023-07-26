@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Rotate" type="JetRunConfigurationType">
+    <option name="MAIN_CLASS_NAME" value="me.markoutte.joker.rotate.MainKt" />
+    <module name="Joker2023.main" />
+    <option name="PROGRAM_PARAMETERS" value="-c com.google.common.primitives.Ints -m rotate(int[],int,int,int) -cp lib/guava-32.1.1-jre.jar" />
+    <shortenClasspath name="NONE" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

@@ -1,0 +1,55 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.9.10'
+    id 'application'
+}
+
+group = 'me.markoutte.conf'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'commons-cli', name: 'commons-cli', version: '1.5.0'
+    implementation group: 'org.ow2.asm', name: 'asm', version: '9.5'
+    testImplementation 'org.jetbrains.kotlin:kotlin-test'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+
+}
+
+kotlin {
+    jvmToolchain(8)
+}
+
+abstract class FuzzerJar extends Jar {
+    @Inject
+    FuzzerJar(String name) {
+        dependsOn project.classes
+
+        archiveBaseName = "fuzzer-${name.replace('.', '-')}"
+        archiveVersion = ""
+
+        dependsOn project.configurations.runtimeClasspath
+
+        from {
+            project.sourceSets.main.output + project.configurations.runtimeClasspath
+                    .collect { it.isDirectory() ? it : project.zipTree(it) }
+        }
+
+        manifest {
+            attributes "Main-Class": "me.markoutte.joker.${name}.MainKt"
+        }
+
+        duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    }
+}
+
+tasks.register("jarTimsort", FuzzerJar, "timsort")
+tasks.register("jarRotate", FuzzerJar, "rotate")
+tasks.register("jarParseStep1", FuzzerJar, "parse.step1")
+tasks.register("jarParseStep2", FuzzerJar, "parse.step2")
+tasks.register("jarParseStep3", FuzzerJar, "parse.step3")
+tasks.register("jarParse", FuzzerJar, "parse")
+
+jar.dependsOn(jarTimsort, jarRotate, jarParseStep1, jarParseStep2, jarParseStep3, jarParse)

@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Parse" type="JetRunConfigurationType">
+    <option name="MAIN_CLASS_NAME" value="me.markoutte.joker.parse.MainKt" />
+    <module name="Joker2023.main" />
+    <option name="PROGRAM_PARAMETERS" value="-c com.alibaba.fastjson2.JSON -m parse(java.lang.String) -cp lib/fastjson2-2.0.38.jar" />
+    <shortenClasspath name="NONE" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

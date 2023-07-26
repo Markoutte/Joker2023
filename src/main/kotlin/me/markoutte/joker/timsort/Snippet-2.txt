@@ -1,0 +1,28 @@
+fun main(args: Array<String>) {
+    val options = Options().apply {
+        addOption("c", "class", true, "Java class fully qualified name")
+        addOption("m", "method", true, "Method to be tested")
+        addOption("t", "timeout", true, "Maximum time for fuzzing in seconds")
+        addOption("s", "seed", true, "The source of randomness")
+    }
+    val parser = DefaultParser().parse(options, args)
+    val className = parser.getOptionValue("class")
+    val methodName = parser.getOptionValue("method")
+    val timeout = parser.getOptionValue("timeout")?.toLong() ?: 10L
+    val seed = parser.getOptionValue("seed")?.toInt() ?: Random.nextInt()
+    val random = Random(seed)
+
+    println("Running: $className.$methodName) with seed = $seed")
+    val errors = mutableSetOf<String>()
+    val b = ByteArray(300)
+    val start = System.nanoTime()
+
+    while(System.nanoTime() - start < TimeUnit.SECONDS.toNanos(timeout)) {
+        val buffer = b.apply(random::nextBytes)
+    }
+
+    println("Errors found: ${errors.size}")
+    println("Time elapsed: ${TimeUnit.NANOSECONDS.toMillis(
+        System.nanoTime() - start
+    )} ms")
+}

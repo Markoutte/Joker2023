@@ -1,0 +1,732 @@
+import { CodeSurfer } from "code-surfer"
+import { nightOwl } from "@code-surfer/themes"
+import "prismjs/components/prism-kotlin"
+import "prismjs/components/prism-java"
+import Screenshot from "./components/screenshot"
+import Video from "./components/video"
+import Slide from "./components/slide"
+import Column from "./components/columns";
+
+export const theme = nightOwl
+
+import fuzzers from './assets/fuzzers.jpg'
+
+<h1 style={{position: 'absolute', bottom: '10%', left: '2.5%', width: '95%', color: 'white', textAlign: 'center'}}>Знакомство с фаззерами</h1>
+
+<Image src={fuzzers} />
+
+---
+
+import photo from './assets/photo.jpeg'
+import telegram from './assets/telegram.svg'
+
+<Column sx={{gap: "2em", width: "95%", alignItems: 'before', paddingTop: '5%'}}>
+    <img src={photo} style={{height: "80%", boxShadow: "0 0 15em black"}} />
+    <div>
+        <p><b>Максим Пелевин</b></p>
+        <ul>
+            <li style={{marginTop: '0.0em', fontSize: '0.6em'}}>Разработчик на Java, Kotlin более 10 лет</li>
+            <li style={{marginTop: '0.2em', fontSize: '0.6em'}}><b>Интересы:</b> динамический анализ кода</li>
+            <li style={{marginTop: '0.2em', fontSize: '0.6em'}}><b>Хобби:</b> преподавание в университете</li>
+        </ul>
+        <div style={{paddingTop: '10%', fontSize: '0.6em', display: 'flex', alignItems: 'center'}}><img src={telegram} width="36px" height="36px" style={{marginRight: "10px"}} /><span>markoutte</span></div>
+    </div>
+</Column>
+
+---
+
+import trends from './assets/trends.png'
+
+<Slide word={'Популярность запросов Fuzzing и Fuzzer'}>
+
+<img style={{marginTop: ".5em"}} src={trends}/>
+
+</Slide>
+
+---
+
+<Slide word='Фаззинг' separator=' — ' size='1.3em' sx={{alignItems: 'before', paddingTop: '15%', justifyContent: 'left'}}>
+    техника тестирования, когда на вход тестируемой программы подаются неожиданные, неправильные или случайные данные в надежде, что всё сломается
+</Slide>
+
+---
+
+<Slide word='Зачем?' separator=' ' size='1.3em' sx={{alignItems: 'before', paddingTop: '15%', justifyContent: 'left'}}>
+    Ошибки есть ошибки, а разработчики не так часто тестируют свой код на ошибки несвязанные со спецификацией
+</Slide>
+
+---
+
+<Slide word='Фаззер' separator=' — ' size='1.3em' sx={{alignItems: 'before', paddingTop: '15%', justifyContent: 'left'}}>
+    программа, которая фаззит
+</Slide>
+
+---
+
+import afl from './assets/afl.png'
+
+<Screenshot source={afl} />
+
+---
+
+import libufzzer from './assets/libfuzzer.png'
+
+<Screenshot source={libufzzer} />
+
+---
+
+import program_fuzz_1 from './assets/program-fuzz-1.svg'
+
+<Screenshot source={program_fuzz_1} background="white" borderRadius="10px" />
+
+---
+
+import program_fuzz_2 from './assets/program-fuzz-2.svg'
+
+<Screenshot source={program_fuzz_2} background="white" borderRadius="10px" />
+
+---
+
+import program_fuzz_3 from './assets/program-fuzz-3.svg'
+
+<Screenshot source={program_fuzz_3} background="white" borderRadius="10px" />
+
+---
+
+import program_fuzz_4 from './assets/program-fuzz-4.svg'
+
+<Screenshot source={program_fuzz_4} background="white" borderRadius="10px" />
+
+---
+
+import program_fuzz_5 from './assets/program-fuzz-5.svg'
+
+<Screenshot source={program_fuzz_5} background="white" borderRadius="10px" />
+
+---
+
+import program_fuzz_6 from './assets/program-fuzz-6.svg'
+
+<Screenshot source={program_fuzz_6} background="white" borderRadius="10px" />
+
+---
+
+import program_fuzz_7 from './assets/program-fuzz-7.svg'
+
+<Screenshot source={program_fuzz_7} background="white" borderRadius="10px" />
+
+---
+
+import program_fuzz_8 from './assets/program-fuzz-8.svg'
+
+<Screenshot source={program_fuzz_8} background="white" borderRadius="10px" />
+
+---
+
+import program_fuzz_9 from './assets/program-fuzz-9.svg'
+
+<Screenshot source={program_fuzz_9} background="white" borderRadius="10px" />
+
+---
+
+import greybox_fuzzing from './assets/greybox-fuzzing.png'
+import greybox_fuzzing_qr from './assets/greybox-fuzzing-qr.png'
+
+<Slide>
+
+<Column sx={{columnGap: '5%'}}>
+
+<Screenshot source={greybox_fuzzing} />
+
+<img src={greybox_fuzzing_qr} width="20%" />
+
+</Column>
+
+</Slide>
+
+---
+
+import sailor from './assets/sailor.jpg'
+
+<Image src={sailor} />
+
+---
+
+import welcome from './assets/welcome.mp4'
+
+<Video source={welcome}></Video>
+
+---
+
+<CodeSurfer>
+
+```kotlin file=../src/main/kotlin/me/markoutte/joker/timsort/Snippet-1.txt
+```
+
+```diff 3
+```
+
+```diff 4
+```
+
+```diff 5
+```
+
+```diff 6
+```
+
+```diff 8:13
+```
+
+```kotlin 16 file=../src/main/kotlin/me/markoutte/joker/timsort/Snippet-2.txt
+```
+
+```diff 13,17,21
+```
+
+```diff 18:20,22
+```
+
+```diff 24:27
+```
+
+```kotlin 19 file=../src/main/kotlin/me/markoutte/joker/timsort/Snippet-2.txt
+```
+
+```kotlin 20:25 file=../src/main/kotlin/me/markoutte/joker/timsort/Snippet-3.txt
+```
+
+```kotlin 29 file=../src/main/kotlin/me/markoutte/joker/timsort/Snippet-4.txt
+```
+
+```kotlin 30:34 file=../src/main/kotlin/me/markoutte/joker/timsort/Snippet-5.txt
+```
+
+```kotlin 33:44 file=../src/main/kotlin/me/markoutte/joker/timsort/Snippet-6.txt
+```
+
+```diff 34:36
+```
+
+```diff 37:42
+```
+
+```kotlin 30,40 file=../src/main/kotlin/me/markoutte/joker/timsort/Snippet-7.txt
+```
+
+```diff 55:64
+```
+
+```diff 66:77
+```
+
+```kotlin 1:77 file=../src/main/kotlin/me/markoutte/joker/timsort/Snippet-7.txt
+```
+
+</CodeSurfer>
+
+---
+
+import timsort_video from './assets/timsort.mp4'
+
+<Video source={timsort_video} background='black'></Video>
+
+---
+
+import timsort_debugged from './assets/timsort-debugged.png'
+
+<Screenshot source={timsort_debugged}></Screenshot>
+
+---
+
+import timsort_possible_problem from './assets/timsort-possible-problem.png'
+
+<Screenshot source={timsort_possible_problem}></Screenshot>
+
+---
+
+import bored_of_math from './assets/bored-of-math.gif'
+
+<Image src={bored_of_math} />
+
+---
+
+import rotate_tests from './assets/rotate-tests.png'
+
+<Screenshot source={rotate_tests}></Screenshot>
+
+---
+
+import rotate_definition from './assets/rotate-definition.png'
+
+<Screenshot source={rotate_definition}></Screenshot>
+
+---
+
+<CodeSurfer>
+
+```java
+  /**
+   * Performs a right rotation of {@code array} between {@code fromIndex} inclusive and {@code
+   * toIndex} exclusive. This is equivalent to {@code
+   * Collections.rotate(Ints.asList(array).subList(fromIndex, toIndex), distance)}, but is
+   * considerably faster and avoids allocations and garbage collection.
+   *
+   * The provided "distance" may be negative, which will rotate left.
+   *
+   * @throws IndexOutOfBoundsException if {@code fromIndex < 0}, {@code toIndex > array.length}, or
+   *     {@code toIndex > fromIndex}
+   * @since 32.0.0
+   */
+```
+
+```diff 9:10
+```
+
+</CodeSurfer>
+
+---
+
+<CodeSurfer>
+
+```kotlin 1:76 file=../src/main/kotlin/me/markoutte/joker/timsort/Snippet-7.txt
+```
+
+```kotlin 2:13 file=../src/main/kotlin/me/markoutte/joker/timsort/Snippet-7.txt
+```
+
+```kotlin 5,12 file=../src/main/kotlin/me/markoutte/joker/rotate/Snippet-1.txt
+```
+
+```diff 23
+```
+
+```diff 57:67
+```
+
+```kotlin 57[59:76],58:62 file=../src/main/kotlin/me/markoutte/joker/rotate/Snippet-2.txt
+```
+
+```diff 72:83
+```
+
+```kotlin 77 file=../src/main/kotlin/me/markoutte/joker/rotate/Snippet-3.txt
+```
+
+```kotlin 1:84 file=../src/main/kotlin/me/markoutte/joker/rotate/Snippet-3.txt
+```
+
+</CodeSurfer>
+
+---
+
+import rotate_video from './assets/rotate.mp4'
+
+<Video source={rotate_video} background='black' />
+
+---
+
+import rotate_error from './assets/rotate-error.png'
+
+<Screenshot source={rotate_error}></Screenshot>
+
+---
+
+import gremlin_gizmo from './assets/gremlin-gizmo.gif'
+
+<Image src={gremlin_gizmo} />
+
+---
+
+import parse_github_definition from './assets/parse-github-definition.png'
+
+<Screenshot source={parse_github_definition} padding='0' />
+
+---
+
+<CodeSurfer>
+
+```kotlin 1:83 file=../src/main/kotlin/me/markoutte/joker/rotate/Snippet-3.txt
+```
+
+```diff 71:83
+```
+
+```kotlin 81:85 file=../src/main/kotlin/me/markoutte/joker/parse/Snippet-1.txt
+```
+
+```diff 1:89
+```
+
+</CodeSurfer>
+
+---
+
+import parse_step1 from './assets/parse-step1.mp4'
+
+<Video source={parse_step1} background='black' />
+
+---
+
+import parse_step1_debugged from './assets/parse-step1-debugged.png'
+
+<Screenshot source={parse_step1_debugged}></Screenshot>
+
+---
+
+import brigada from './assets/brigada.gif'
+
+<Image src={brigada} />
+
+---
+
+import string_json from './assets/string-json.svg'
+
+<Screenshot source={string_json} boxShadow='none' />
+
+---
+
+import fuzzer_blackbox_1 from './assets/fuzzer-blackbox-1.svg'
+
+<Screenshot source={fuzzer_blackbox_1} boxShadow='none' />
+
+---
+
+import fuzzer_blackbox_2 from './assets/fuzzer-blackbox-2.svg'
+
+<Screenshot source={fuzzer_blackbox_2} boxShadow='none' />
+
+---
+
+import fuzzer_blackbox_3 from './assets/fuzzer-blackbox-3.svg'
+
+<Screenshot source={fuzzer_blackbox_3} boxShadow='none' />
+
+---
+
+import fuzzer_blackbox_4 from './assets/fuzzer-blackbox-4.svg'
+
+<Screenshot source={fuzzer_blackbox_4} boxShadow='none' />
+
+---
+
+import fuzzer_blackbox_5 from './assets/fuzzer-blackbox-5.svg'
+
+<Screenshot source={fuzzer_blackbox_5} boxShadow='none' />
+
+---
+
+import fuzzer_blackbox_6 from './assets/fuzzer-blackbox-6.svg'
+
+<Screenshot source={fuzzer_blackbox_6} boxShadow='none' />
+
+---
+
+import fuzzer_greybox_1 from './assets/fuzzer-greybox-1.svg'
+
+<Screenshot source={fuzzer_greybox_1} boxShadow='none' />
+
+---
+
+import fuzzer_greybox_2 from './assets/fuzzer-greybox-2.svg'
+
+<Screenshot source={fuzzer_greybox_2} boxShadow='none' />
+
+---
+
+<CodeSurfer>
+
+```kotlin 1:88 file=../src/main/kotlin/me/markoutte/joker/parse/Snippet-1.txt
+```
+
+```diff 30
+```
+
+```kotlin 29,32[22:76],36[50:58],37:41 file=../src/main/kotlin/me/markoutte/joker/parse/Snippet-2.txt
+```
+
+```diff 99:108
+```
+
+```diff 1:108
+```
+
+</CodeSurfer>
+
+---
+
+import parse_step2 from './assets/parse-step2.mp4'
+
+<Video source={parse_step2} background='black' />
+
+---
+
+import hard_choice from './assets/hard-choice.gif'
+
+<Image src={hard_choice} />
+
+---
+
+import fuzzer_choose_0 from './assets/fuzzer-choose-0.svg'
+
+<Screenshot source={fuzzer_choose_0} boxShadow='none' />
+
+---
+
+import fuzzer_choose_1 from './assets/fuzzer-choose-1.svg'
+
+<Screenshot source={fuzzer_choose_1} boxShadow='none' />
+
+---
+
+import fuzzer_choose_2 from './assets/fuzzer-choose-2.svg'
+
+<Screenshot source={fuzzer_choose_2} boxShadow='none' />
+
+---
+
+import fuzzer_choose_3 from './assets/fuzzer-choose-3.svg'
+
+<Screenshot source={fuzzer_choose_3} boxShadow='none' />
+
+---
+
+import fuzzer_choose_4 from './assets/fuzzer-choose-4.svg'
+
+<Screenshot source={fuzzer_choose_4} boxShadow='none' />
+
+---
+
+import fuzzer_choose_5 from './assets/fuzzer-choose-5.svg'
+
+<Screenshot source={fuzzer_choose_5} boxShadow='none' />
+
+---
+
+import fuzzer_choose_6 from './assets/fuzzer-choose-6.svg'
+
+<Screenshot source={fuzzer_choose_6} boxShadow='none' />
+
+---
+
+import fuzzer_choose_7 from './assets/fuzzer-choose-7.svg'
+
+<Screenshot source={fuzzer_choose_7} boxShadow='none' />
+
+---
+
+import fuzzer_choose_8 from './assets/fuzzer-choose-8.svg'
+
+<Screenshot source={fuzzer_choose_8} boxShadow='none' />
+
+---
+
+import fuzzer_choose_9 from './assets/fuzzer-choose-9.svg'
+
+<Screenshot source={fuzzer_choose_9} boxShadow='none' />
+
+---
+
+<CodeSurfer>
+
+```kotlin 1:107 file=../src/main/kotlin/me/markoutte/joker/parse/Snippet-2.txt
+```
+
+```diff 38
+```
+
+```kotlin 37,39 file=../src/main/kotlin/me/markoutte/joker/parse/Snippet-3.txt
+```
+
+```diff 101:104
+```
+
+```diff 72
+```
+
+```kotlin 72:130 file=../src/main/kotlin/me/markoutte/joker/parse/Snippet-4.txt
+```
+
+</CodeSurfer>
+
+---
+
+import asm_logo from './assets/asm-logo.svg'
+import asm_qr from './assets/asm-qr.png'
+
+<Column sx={{gap: '10%'}}>
+
+<div style={{width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'end', flexFlow: 'column'}}>
+    <Screenshot width='50%' source={asm_logo} boxShadow='none' />
+</div>
+
+<div style={{width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'start', flexFlow: 'column'}}>
+    <Screenshot source={asm_qr} boxShadow='none' width='50%' height='50%' />
+</div>
+
+</Column>
+
+---
+
+import asm_0 from './assets/asm-0.svg'
+
+<Screenshot source={asm_0} boxShadow='none' />
+
+---
+
+import asm_1 from './assets/asm-1.svg'
+
+<Screenshot source={asm_1} boxShadow='none' />
+
+---
+
+import asm_2 from './assets/asm-2.svg'
+
+<Screenshot source={asm_2} boxShadow='none' />
+
+---
+
+import asm_3 from './assets/asm-3.svg'
+
+<Screenshot source={asm_3} boxShadow='none' />
+
+---
+
+import asm_4 from './assets/asm-4.svg'
+
+<Screenshot source={asm_4} boxShadow='none' />
+
+---
+
+<CodeSurfer>
+
+```kotlin 72:130 file=../src/main/kotlin/me/markoutte/joker/parse/Snippet-4.txt
+```
+
+```diff 73:81
+```
+
+```diff 83:87
+```
+
+```diff 88:93
+```
+
+```diff 94:101
+```
+
+```diff 102:123
+```
+
+```diff 112:122
+```
+
+```diff 108:122
+```
+
+```diff 1:172
+```
+
+</CodeSurfer>
+
+---
+
+import parse_step3 from './assets/parse-step3.mp4'
+
+<Video source={parse_step3} background='black' />
+
+---
+
+<CodeSurfer>
+
+```kotlin 1:172 file=../src/main/kotlin/me/markoutte/joker/parse/Snippet-4.txt
+```
+
+```diff 29
+```
+
+```kotlin 29:32 file=../src/main/kotlin/me/markoutte/joker/parse/Snippet-5.txt
+```
+
+```diff 175:190
+```
+
+```diff 1:190
+```
+
+</CodeSurfer>
+
+---
+
+import parse_step4 from './assets/parse-step4.mp4'
+
+<Video source={parse_step4} background='black' />
+
+---
+
+### Что в итоге?
+
+<div>Coverage guided mutation-based grey-box fuzzer</div>
+
+---
+
+### Что в итоге?
+
+<div>5 ошибок в опенсурс проектах</div>
+
+---
+
+import github from './assets/github-mark-white.svg'
+
+### Как попробовать?
+
+<div style={{fontSize: '1em', display: 'flex', alignItems: 'center'}}><img src={github} width="60px" height="60px" style={{marginRight: "20px"}} /><span><a href="http://github.com/Markoutte/Joker2023">Markoutte/Joker2023</a></span></div>
+
+---
+
+import utbot from './assets/utbot.svg'
+
+<Columns sx={{columnGap: "5%"}}>
+<div style={{display: "flex", flexFlow: "column", gap: '.4em', justifyContent: "center", alignItems: "end", width: "100%"}}>
+    <Screenshot source={utbot} boxShadow='none' width='75%' />
+    <a href="https://www.utbot.org" style={{fontSize: '.7em'}}>https://utbot.org</a>
+</div>
+
+<div style={{width: "150%", padding: "5%"}}>
+    <p style={{fontSize: '.8em'}}>Генерация тестов для Spring: из чего же, из чего же сделаны тесты</p>
+    <p style={{fontSize: '.5em'}}>
+        Денис Фокин, Егор Куликов
+    </p>
+    <p style={{fontSize: '.5em'}}>Joker, 14 октября, 12:00 – 12:45</p>
+    <hr />
+    <p style={{fontSize: '.8em'}}>Вывести типы из Python: проблемы анализа Python-кода</p>
+    <p style={{fontSize: '.5em'}}>
+        Екатерина Точилина, Вячеслав Тамарин
+    </p>
+    <p style={{fontSize: '.5em'}}>PiterPy, 13 ноября, 11:30 – 12:15</p>
+</div>
+</Columns>
+
+---
+
+import afl_rabbit from './assets/afl-rabbit.gif'
+
+<Image src={afl_rabbit} />
+
+---
+
+import avatar from './assets/ava.svg'
+import Columns from "./components/columns";
+
+<div style={{width: "100%"}}>
+<Column sx={{gap: ".5em", width: "95%", alignItems: 'before', paddingTop: '5%'}}>
+    <div style={{width: "2em", height: "2em", backgroundColor: "white", textAlign: "center", borderRadius: "100%", marginTop: "0.3em"}}>
+        <img src={avatar} style={{height: "90%", paddingTop: "5%"}} />
+    </div>
+    <div>
+        <div><b>Максим Пелевин</b></div>
+        <hr />
+        <div style={{fontSize: '0.6em', display: 'flex', alignItems: 'center'}}><img src={telegram} width="36px" height="36px" style={{marginRight: "10px"}} /><span>markoutte</span></div>
+    </div>
+</Column>
+</div>

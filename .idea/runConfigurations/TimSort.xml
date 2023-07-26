@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="TimSort" type="JetRunConfigurationType">
+    <option name="MAIN_CLASS_NAME" value="me.markoutte.joker.timsort.MainKt" />
+    <module name="Joker2023.main" />
+    <option name="PROGRAM_PARAMETERS" value="-c me.markoutte.examples.TimSort -m timSort(int[])" />
+    <shortenClasspath name="NONE" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
