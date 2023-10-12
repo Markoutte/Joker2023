@@ -115,8 +115,8 @@ fun generateInputValues(method: Method, data: ByteArray): Array<Any> {
 }
 
 fun Random.mutate(buffer: ByteArray): ByteArray = buffer.clone().apply {
-    val position = nextInt(0, 300)
-    val repeat = nextInt((300 - position))
+    val position = nextInt(0, size)
+    val repeat = nextInt((size - position))
     val from = nextInt(-128, 127)
     val until = nextInt(from + 1, 128)
     repeat(repeat) { i ->
